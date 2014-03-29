@@ -203,8 +203,9 @@ header h1 a img {
 /*Content*/
 .content {
 	padding-top: 125px;
-	text-align: center;
+	text-align: left;
 	position: relative;
+	
 }
 
 .content:after {

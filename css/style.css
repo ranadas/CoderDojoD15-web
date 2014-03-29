@@ -221,7 +221,15 @@ border-color: #334960 transparent transparent transparent;
 	left: 50%;
 	margin-left: -50px;
 	top: 0;
+}
 
+#aboutdiv{
+height:30%;
+width:20%;
+border:solid thin red;
+background-color: #F17C72;
+font-family:;
+font-size:;
 }
 
 #page3:after {

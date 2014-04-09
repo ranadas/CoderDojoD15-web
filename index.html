@@ -21,7 +21,7 @@
 		<script src="js/jquery.ui.totop.js"></script>
 		<script src="js/tms-0.4.1.js"></script>
 		<script src="js/css3-mediaqueries.js"></script>
-		<script> <!--now comment here change--!>
+		<script>
 			$(document).ready(function(){
 				$('.slider_wrapper')._TMS({
 					show:0,
@@ -53,8 +53,9 @@
 				                            if(currClass!==names[i-2])
 				                                currClass=names[i-2]
 				                                header.removeAttr("class").addClass(names[i-2])
-			                         })
-			}(); });
+                     })
+                }();
+            });
 			function goToByScroll(id){
 				$('html,body').animate({scrollTop: $("#"+id).offset().top},'slow');
 				}
@@ -62,9 +63,6 @@
 					$().UItoTop({ easingType: 'easeOutQuart' });
 				});
 		</script>
-        
-        <script type="text/javascript" src="src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.12/angular.min.js""></script>
-         
 		
 	</head>
 	<body class="">
@@ -110,18 +108,22 @@
 						<div class="zerogrid">
 				<div class="col-full">
 					<div class="wrap-col">
-					<div id="about-us-div">
-						<div id="about-title">Students & Parents</div><p><br>CoderDojo is a non-profit organization run solely on volunteers. It teaches people aged 7-17 about <br>computer programming in a fun and relaxed way. Everybody is welcome to come and learn to write <br>website, create apps, make games and enjoy themselves. All you need is a laptop.</p>
-<br>
-<p><br>
-<div id="about-title">Mentors</div>
-<br>Here at CoderDojo we can never have enough mentors to help out. Anyone can be come a mentor but remember this is purely <br>voluntary. So if you are willing to give up your Saturday morning we will be more than happy. Knowledge of a programming <br>language is recommended but is not 100% necessary. Check out the enquiry form to the right.</p>
-
-<br>
-<p><br>
-<div id="about-title">Supporting</div>
-<br>Supporting helps CoderDojo a lot. Since CoderDojo is non-profit supporting and Donating is a huge help and we are incredibly grateful<br>Contact us to the left to get into contact</p></div>
-						<div id="input"><!-- the input -->
+                        <div id="about-us-div">
+                            <div id="about-title">Students & Parents</div><p><br>
+                            CoderDojo is a non-profit organization run solely on volunteers. It teaches people aged 7-17 about <br>
+                            computer programming in a fun and relaxed way. Everybody is welcome to come and learn to write <br>
+                            website, create apps, make games and enjoy themselves. All you need is a laptop.</p><br>
+                            <p><br>
+                            <div id="about-title">Mentors</div><br>
+                            Here at CoderDojo we can never have enough mentors to help out. Anyone can be come a mentor but remember this is purely <br>
+                            voluntary. So if you are willing to give up your Saturday morning we will be more than happy. Knowledge of a programming <br>
+                            language is recommended but is not 100% necessary. Check out the enquiry form to the right.</p><br>
+                            <p><br>
+                            <div id="about-title">Supporting</div><br>
+                            Supporting helps CoderDojo a lot. Since CoderDojo is non-profit supporting and Donating is a huge help and we are incredibly grateful<br>
+                            Contact us to the left to get into contact</p>
+                        </div>
+					    <div id="input">
 							<p> Name: <br>
 							<input type="text" id="name"></p>
 							<p> Email: <br>
@@ -138,227 +140,256 @@
 							<p> Message : </br>
 							<textarea id="Message"></textarea></p>
 							<button id="Submit"> Submit </button>
-						</div>
+					    </div>
 					</div>
 				</div>
-
 			</div>
 		</div>
 		<div id="page3" class="content">
 			<div class="zerogrid">
 				<div class="col-full">
-					<div class="wrap-col">
-							<h3>Belts System</h3>
-					</div>
-						</div>
-
-							<div class="text1">
-					
-								
-									The belt and badge system is a new system that is being introduced <br>
-									to CoderDojo D15. It includes giving children belts and badges as they<br>
-									pass certain goals, hit set milestones or write a piece of code that stands above the rest. When you finish a class in CoderDojo D15 you will recieve a 
-									badge next to your name on your profile on the CoderDojo D15 official website. This will notify your peers of what you have done in 
-									each class and to what extent do you know your code. The belt system is a more prestigious system.
-									In which we award children yellow, red, blue and possibly even black belts. The yellow belts will be awarded for a significant achievement in introduction
-									classes. The red belts will be given for children who have passed above their peers in the more advanced classes. The blue belts will be given
-									when a child has done an incredible achievement in the more advanced classes that shocked mentors. The black belts will only be awarded on very
-									unique occasions. You have passed above the knowledge of your mentor and done something that stands out in the whole of CoderDojo D15. You might then be allowed
-									to become a mentor! Inside these belts there will be a USB storage stick. The storage capacity will range from 2GB in the lower belts To 8GB in the black.  
-									These belts will notify your peers of your outstanding achievements in CoderDojo D15.
-									<br><br>
-
-									DISCLAIMER:<br>
-									This belt and badge system is unique to CoderDojo D15 and will not be recognised in other dojos. (except maybe in the cases of the Black belt)
-					</div>
+                    <div class="wrap-col"><h3>Belts System</h3></div>
 				</div>
+				<div class="text1">
+                    The belt and badge system is a new system that is being introduced <br>
+                    to CoderDojo D15. It includes giving children belts and badges as they<br>
+                    pass certain goals, hit set milestones or write a piece of code that stands above the rest. When you
+                    finish a class in CoderDojo D15 you will recieve a
+                    badge next to your name on your profile on the CoderDojo D15 official website. This will notify your
+                    peers of what you have done in
+                    each class and to what extent do you know your code. The belt system is a more prestigious system.
+                    In which we award children yellow, red, blue and possibly even black belts. The yellow belts will be
+                    awarded for a significant achievement in introduction
+                    classes. The red belts will be given for children who have passed above their peers in the more
+                    advanced classes. The blue belts will be given
+                    when a child has done an incredible achievement in the more advanced classes that shocked mentors.
+                    The black belts will only be awarded on very
+                    unique occasions. You have passed above the knowledge of your mentor and done something that stands
+                    out in the whole of CoderDojo D15. You might then be allowed
+                    to become a mentor! Inside these belts there will be a USB storage stick. The storage capacity will
+                    range from 2GB in the lower belts To 8GB in the black.
+                    These belts will notify your peers of your outstanding achievements in CoderDojo D15.
+                    <br><br>
+                    DISCLAIMER:<br>
+                    This belt and badge system is unique to CoderDojo D15 and will not be recognised in other dojos.
+                    (except maybe in the cases of the Black belt)
+                </div>
+			</div>
 
 			</div>
 		
 		<div id="page4" class="content">
 			<div class="zerogrid">
-				<div class="col-full">
-					<div class="wrap-col">
-						<h3>Company Donations</h3>
-					</div>
-				</div>
+                <div class="col-full">
+                    <div class="wrap-col">
+                        <h3>Company Donations</h3>
+                    </div>
+                </div>
+                <div class="text1">
+                    <p>This is CoderDojo D15 and we would like to welcome anyone who wants to participate and/or donate
+                        to us.</p>
+                    Donating will go towards buying things to enhance the kids experiences and immerse them deeper into the
+                    world of technology. We would let them have at things like Arduino or Lego MindStorm. These are sets that
+                    let children and adults alike delve into circuit building and programming. Creating their own circuits
+                    from their own ideas or simply building a standard circuit to learn. We would like to encourage companies
+                    to take part in donating as it is towards a great cause. The future IT in Ireland. This will give the children
+                    an early start and so they will be more knowledgeable in the subjects of software developing and circuitry when
+                    they leave school or maybe even take up a role in your company! Donation money will also go towards CoderDojo
+                    D15's "Belt" project, in which we give belts of different colour to kids that they can wear around their wrist.
+                    These will go up in traditional martial art fashion further enhancing the Dojo experience. But there is one more thing.
+                    The belts have a USB drive inserted into them with bigger storage space as the child develops more skills and reaches certain goals.
+                    We would like to thank ITB for funding our first set of belts which were the beginning of something truly special. These were our white belts,
+                    the starting grade in martial arts. We would also like to thank ITB again for letting us use their facilities to base coderdojo.
+                    It is a brilliant setting for the kids as this is where they might even go in the future or further education.
+                    All donations first go to the Hello World Foundation which is the fully registered charity that helped fund CoderDojo initially.
+                    This donation will then be sent on to the dojo of your choice. Thank you. We look forward to seeing
+                    the children digging in to the Arduinos, Lego MindStorms and Belts that you have kindly funded!
+                    <br><br>
 
-					<div class="text1">
-
-								
-		
-					<p>This is CoderDojo D15 and we would like to welcome anyone who wants to participate and/or donate to us.</p>
-					Donating will go towards buying things to enhance the kids experiences and immerse them deeper into the
-					world of technology. We would let them have at things like Arduino or Lego MindStorm. These are sets that
-					let children and adults alike delve into circuit building and programming. Creating their own circuits 
-				    from their own ideas or simply building a standard circuit to learn. We would like to encourage companies 
-					to take part in donating as it is towards a great cause. The future IT in Ireland. This will give the children
-					an early start and so they will be more knowledgeable in the subjects of software developing and circuitry when
-					they leave school or maybe even take up a role in your company! Donation money will also go towards CoderDojo
-					D15's "Belt" project, in which we give belts of different colour to kids that they can wear around their wrist.
-					These will go up in traditional martial art fashion further enhancing the Dojo experience. But there is one more thing.
-					The belts have a USB drive inserted into them with bigger storage space as the child develops more skills and reaches certain goals. 
-					We would like to thank ITB for funding our first set of belts which were the beginning of something truly special. These were our white belts,
-					the starting grade in martial arts. We would also like to thank ITB again for letting us use their facilities to base coderdojo. 
-					It is a brilliant setting for the kids as this is where they might even go in the future or further education.	
-					All donations first go to the Hello World Foundation which is the fully registered charity that helped fund CoderDojo initially. 
-					This donation will then be sent on to the dojo of your choice. Thank you. We look forward to seeing the children
-					digging in to the Arduinos, Lego MindStorms and Belts that you have kindly funded!
-					<br><br>
-					<h2>Thank you.</h2>
-					<br>
-					<br>
-					<br>
+                    <h2>Thank you.</h2>
+                    <br>
+                    <br>
+                    <br>
 					<!--=======links to companies================================-->
 					
 					</div>
-					
-					
-				<div class="companies">
-					<div class="col-1-4">
-						<div class="wrap-col">
-							<img src="images/itb.jpg" alt="">
-							<div class="text1">ITB</div>Institute of Technology Blanchardsdown
-							<br>
-							<a href="http://www.itb.ie">Go to Site</a>
-						</div>
-					</div>
-					<div class="col-1-4">
-						<div class="wrap-col">
-							<img src="images/helloworld.jpg" alt="">
-							<div class="text1">Hello World Foundation</div>The fully registered charity that funded CoderDojo initially
-							<br>
-							<a href="http://helloworldfoundation.com">Go to Site</a>
-						</div>
-					</div>
-					<div class="col-1-4">
-						<div class="wrap-col">
-							<img src="images/bentleylogo.jpg" alt="">
-							<!--=======I need to figure out his company name================================-->
-							<div class="text1">Bently Systems</div>Bently systems has donated many Lego Mindstorms and Arduinos
-							<br>
-							<a href="http://www.bentley.com/en-US/">Go to Site</a>
-						</div>
-					</div>
-					<div class="clear"></div>					
-				</div>
+
+
+                <div class="companies">
+                    <div class="col-1-4">
+                        <div class="wrap-col">
+                            <img src="images/itb.jpg" alt="">
+
+                            <div class="text1">ITB</div>
+                            Institute of Technology Blanchardsdown
+                            <br>
+                            <a href="http://www.itb.ie">Go to Site</a>
+                        </div>
+                    </div>
+                    <div class="col-1-4">
+                        <div class="wrap-col">
+                            <img src="images/helloworld.jpg" alt="">
+
+                            <div class="text1">Hello World Foundation</div>
+                            The fully registered charity that funded CoderDojo initially
+                            <br>
+                            <a href="http://helloworldfoundation.com">Go to Site</a>
+                        </div>
+                    </div>
+                    <div class="col-1-4">
+                        <div class="wrap-col">
+                            <img src="images/bentleylogo.jpg" alt="">
+                            <!--=======I need to figure out his company name================================-->
+                            <div class="text1">Bently Systems</div>
+                            Bently systems has donated many Lego Mindstorms and Arduinos
+                            <br>
+                            <a href="http://www.bentley.com/en-US/">Go to Site</a>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
 			
 			</div>
 		</div>	
 				
 		<div id="page5" class="content">
-						<div class="zerogrid">
-				<div class="col-full">
-					<div class="wrap-col">
-							<h3>Contact & Find Us</h3><br><br>
-					</div>
-				</div>
-					<div id="contentBox" style="margin:0px auto; width:100%">
-					<div id="column1" style="float:left; margin:50; width:60%;">
-						
-					 <iframe width="560" height="420" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.ie/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Block+C,+Institute+of+Technology+Blanchardstown,+Blanchardstown+Rd+N,+Dublin+15,+Ireland&amp;aq=0&amp;oq=i&amp;sll=53.4051,-6.3779&amp;sspn=0.031878,0.077162&amp;ie=UTF8&amp;hq=&amp;hnear=Block+C,+Institute+of+Technology+Blanchardstown,+Blanchardstown+Rd+N,+Dublin+15,+County+Dublin&amp;t=m&amp;z=14&amp;ll=53.405484,-6.378681&amp;output=embed"></iframe><br /><small><a href="https://maps.google.ie/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Block+C,+Institute+of+Technology+Blanchardstown,+Blanchardstown+Rd+N,+Dublin+15,+Ireland&amp;aq=0&amp;oq=i&amp;sll=53.4051,-6.3779&amp;sspn=0.031878,0.077162&amp;ie=UTF8&amp;hq=&amp;hnear=Block+C,+Institute+of+Technology+Blanchardstown,+Blanchardstown+Rd+N,+Dublin+15,+County+Dublin&amp;t=m&amp;z=14&amp;ll=53.405484,-6.378681" style="color:#0000FF;text-align:left">View Larger Map</a></small>    
-					<div class="text1">	<br>	
-					<h3>Directions</h3> <br>
-					<b><p>Coderdojo is in ITB near the Junction of the M50 and the N3. </b><br></div>
-					Here are directions from:<br><br>
-					<b>M50 Southbound</b><br>
-					Southbound on the M50 take Exit 6 for Blanchardstown(N3).Follow the slip road and take N3 towards Navan/Cavan. Travel straight along N3 (through 2 sets of traffic lights) take the second slip road for the Blanchardstown town Centre.At the top of the slip road, take a right (follow Institute of Technology sign) follow this road to the next roundabout & take the 1st exit which is the entrance<br> to ITB.
-					<br><br>
-					<b>M50 Northbound</b><br>
-					Northbound on the M50 take Exit 6 for Blanchardstown(N3).Follow the slip road & take N3 towards Navan/Cavan.Travel straight along N3 (through 2 sets of traffic lights) take the second slip road for the Blanchardstown town Centre.At thetop of the slip road,take a right (follow Institute of<br> Technology sign) follow this road to the next roundabout & take the 1st exit which is the entrance to ITB.
-					<br><br>
-												
-					<b>Travelling from the City Centre</b><br>
-					Head for the N3 (main Navan/Cavan road).The first roundabout you will come to is at the Halfway House Pub (on the right hand side).Go straight through the roundabout continuing on the N3.Travel straight along N3 through a set of traffic lights (Travelodge Hotel is on the right hand side). The next roundabout is the M50 roundabout.Go directly through, continuing on the N3.Travel straight along N3 (through 2 sets of traffic lights). Take the second slip road for the Blanchardstown town Centre.At the top of the slip road,take a right (follow Institute of Technology sign) travel along this road to the next roundabout & take the 1st exit which is the entrance to ITB.
-					<br><br>
-					<b>Travelling from the direction of Navan/Cavan.</b><br>
-					Travelling along the N3 take the slip road for the Blanchardstown Town Centre.When you reach the top of the slip road,turn right.Continue straight and turn left at traffic lights on to Blanchardstown Road North.Travel along this road for approx. 1 mile to the next roundabout & take the 1st exit which is the entrance to ITB.
-					
+            <div class="zerogrid">
+                <div class="col-full">
+                    <div class="wrap-col">
+                        <h3>Contact & Find Us</h3><br><br>
+                    </div>
+                </div>
+                <div id="contentBox" style="margin:0px auto; width:100%">
+                    <div id="column1" style="float:left; margin:50; width:60%;">
 
-					<br><br><div class="text1">
-					Time 10am - 12pm Saturdays <br><br>
-					
-					Location: <b>Institute of Technology Blanchardstown (Dublin 15).</b>
-					<br><br>
-					Tel: Ask Larry?
-					</p>
-					
-					</div>
-					</div>
+                        <iframe width="560" height="420" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+                                src="https://maps.google.ie/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Block+C,+Institute+of+Technology+Blanchardstown,+Blanchardstown+Rd+N,+Dublin+15,+Ireland&amp;aq=0&amp;oq=i&amp;sll=53.4051,-6.3779&amp;sspn=0.031878,0.077162&amp;ie=UTF8&amp;hq=&amp;hnear=Block+C,+Institute+of+Technology+Blanchardstown,+Blanchardstown+Rd+N,+Dublin+15,+County+Dublin&amp;t=m&amp;z=14&amp;ll=53.405484,-6.378681&amp;output=embed"></iframe>
+                        <br/>
+                        <small><a
+                                href="https://maps.google.ie/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Block+C,+Institute+of+Technology+Blanchardstown,+Blanchardstown+Rd+N,+Dublin+15,+Ireland&amp;aq=0&amp;oq=i&amp;sll=53.4051,-6.3779&amp;sspn=0.031878,0.077162&amp;ie=UTF8&amp;hq=&amp;hnear=Block+C,+Institute+of+Technology+Blanchardstown,+Blanchardstown+Rd+N,+Dublin+15,+County+Dublin&amp;t=m&amp;z=14&amp;ll=53.405484,-6.378681"
+                                style="color:#0000FF;text-align:left">View Larger Map</a></small>
+                        <div class="text1"><br>
 
-					<div id="column2" style="float:left; margin:50;width:40%;">
-					<div class="text1">Ask a Question</div>
-							<form id="form" action="">
-							<div class="success_wrapper">
-							<div class="success">Contact form submitted!<br>
-							<strong>We will be in touch soon.</strong> </div></div>
-							<fieldset>
-							<label class="name">
-							<input type="text" value="Name:">
-							<br class="clear">
-							<span class="error error-empty">*This is not a valid name.</span><span class="empty error-empty">*This field is required.</span> </label>
-							<label class="email">
-							     <input type="text" value="E-mail:">
-							     <br class="clear">
-							     <span class="error error-empty">*This is not a valid email address.</span>
-                                 <span class="empty error-empty">*This field is required.</span>
+                            <h3>Directions</h3> <br>
+                            <b><p>Coderdojo is in ITB near the Junction of the M50 and the N3.</b><br></div>
+                        Here are directions from:<br><br>
+                        <b>M50 Southbound</b><br>
+                        Southbound on the M50 take Exit 6 for Blanchardstown(N3).Follow the slip road and take N3 towards Navan/Cavan. Travel straight along N3 (through 2 sets of
+                        traffic lights) take the second slip road for the Blanchardstown town Centre.At the top of the slip road, take a right (follow Institute of Technology sign)
+                        follow this road to the next roundabout & take the 1st exit which is the entrance<br> to ITB.
+                        <br><br>
+                        <b>M50 Northbound</b><br>
+                        Northbound on the M50 take Exit 6 for Blanchardstown(N3).Follow the slip road & take N3 towards Navan/Cavan.Travel straight along N3 (through 2 sets of
+                        traffic lights) take the second slip road for the Blanchardstown town Centre.At thetop of the slip road,take a right (follow Institute of<br> Technology
+                        sign) follow this road to the next roundabout & take the 1st exit which is the entrance to ITB.
+                        <br><br>
+
+                        <b>Travelling from the City Centre</b><br>
+                        Head for the N3 (main Navan/Cavan road).The first roundabout you will come to is at the Halfway House Pub (on the right hand side).Go straight through the
+                        roundabout continuing on the N3.Travel straight along N3 through a set of traffic lights (Travelodge Hotel is on the right hand side). The next roundabout
+                        is the M50 roundabout.Go directly through, continuing on the N3.Travel straight along N3 (through 2 sets of traffic lights). Take the second slip road for
+                        the Blanchardstown town Centre.At the top of the slip road,take a right (follow Institute of Technology sign) travel along this road to the next roundabout
+                        & take the 1st exit which is the entrance to ITB.
+                        <br><br>
+                        <b>Travelling from the direction of Navan/Cavan.</b><br>
+                        Travelling along the N3 take the slip road for the Blanchardstown Town Centre.When you reach the top of the slip road,turn right.Continue straight and turn
+                        left at traffic lights on to Blanchardstown Road North.Travel along this road for approx. 1 mile to the next roundabout & take the 1st exit which is the
+                        entrance to ITB.
+
+
+                        <br><br>
+
+                        <div class="text1">
+                            Time 10am - 12pm Saturdays <br><br>
+
+                            Location: <b>Institute of Technology Blanchardstown (Dublin 15).</b>
+                            <br><br>
+                            Tel: Ask Larry?
+                            </p>
+
+                        </div>
+                    </div>
+
+                    <div id="column2" style="float:left; margin:50;width:40%;">
+                        <div class="text1">Ask a Question</div>
+                        <form id="form" action="">
+                            <div class="success_wrapper">
+                                <div class="success">Contact form submitted!<br>
+                                    <strong>We will be in touch soon.</strong></div>
+                            </div>
+                            <fieldset>
+                                <label class="name">
+                                    <input type="text" value="Name:">
+                                    <br class="clear">
+                                    <span class="error error-empty">*This is not a valid name.</span><span class="empty error-empty">*This field is required.</span> </label>
+                                <label class="email">
+                                    <input type="text" value="E-mail:">
+                                    <br class="clear">
+                                    <span class="error error-empty">*This is not a valid email address.</span>
+                                    <span class="empty error-empty">*This field is required.</span>
                                 </label>
-							<label class="message">
-							<textarea>Message:</textarea>
-							<br class="clear">
-							<span class="error">*The message is too short.</span> <span class="empty">*This field is required.</span> </label>
-							<div class="clear"></div>
-							<div class="btns"><a data-type="submit" class="link1">Send</a>
-							<div class="clear"></div>
-							</div></fieldset></form>
-							
-							<br>
-							<div><a href="https://twitter.com/CoderDojoD15"><img title="Twitter" src="images/twitter.png" alt="Twitter" width="35" height="35" /></a></div>
-							<i>Look at us on twitter!</i>
-							
-							</div>
+                                <label class="message">
+                                    <textarea>Message:</textarea>
+                                    <br class="clear">
+                                    <span class="error">*The message is too short.</span> <span class="empty">*This field is required.</span> </label>
+
+                                <div class="clear"></div>
+                                <div class="btns"><a data-type="submit" class="link1">Send</a>
+
+                                    <div class="clear"></div>
+                                </div>
+                            </fieldset>
+                        </form>
+
+                        <br>
+
+                        <div><a href="https://twitter.com/CoderDojoD15"><img title="Twitter" src="images/twitter.png" alt="Twitter" width="35" height="35"/></a></div>
+                        <i>Look at us on twitter!</i>
+
+                    </div>
 
 
-								</div>
+                </div>
 
-					<div class="clear"></div>	
-					</div>
+                <div class="clear"></div>
+            </div>
 		</div>
 
 <!--==============================footer=================================-->
-		<footer>
-		<div class="social">
-                <a href="https://twitter.com/CoderDojoD15" title="Visit @CoderDojoD15 on Twitter!" target="_blank">
-                <img src="images/twitter.png" alt="Twitter icon" class="icon">
-                </a>
-           
-                <a href="http://www.facebook.com/" title="Visit us on Facebook!" target="_blank">
-                <img src="images/facebook.png" alt="Facebook icon" class="icon">
-                </a>
-            
-                <a href="http://www.youtube.com/" title="Visit us on YouTube!" target="_blank">
-                <img src="images/youtube.png" alt="YouTube icon" class="icon">
-                </a>
-           
-                <a href="http://pinterest.com/" title="Visit the dojo on Pinterest!" target="_blank">
-                <img src="images/pinterest.png" alt="Pinterest icon" class="icon">
-                </a>
-           
-                <a href="https://plus.google.com/" title="Visit CoderDojoITB on Google Plus!" target="_blank">
-                <img src="images/googleplus.png" alt="Google Plus icon" class="icon">
-                </a>
-               
+<footer>
+    <div class="social">
+        <a href="https://twitter.com/CoderDojoD15" title="Visit @CoderDojoD15 on Twitter!" target="_blank">
+            <img src="images/twitter.png" alt="Twitter icon" class="icon">
+        </a>
+
+        <a href="http://www.facebook.com/" title="Visit us on Facebook!" target="_blank">
+            <img src="images/facebook.png" alt="Facebook icon" class="icon">
+        </a>
+
+        <a href="http://www.youtube.com/" title="Visit us on YouTube!" target="_blank">
+            <img src="images/youtube.png" alt="YouTube icon" class="icon">
+        </a>
+
+        <a href="http://pinterest.com/" title="Visit the dojo on Pinterest!" target="_blank">
+            <img src="images/pinterest.png" alt="Pinterest icon" class="icon">
+        </a>
+
+        <a href="https://plus.google.com/" title="Visit CoderDojoITB on Google Plus!" target="_blank">
+            <img src="images/googleplus.png" alt="Google Plus icon" class="icon">
+        </a>
+
     </div>
-			<div class="zerogrid">
-				<div class="col-full">
-					<div class="wrap-col">
-						<div class="copy">
-							<!--a onClick="goToByScroll('page1'); return false;" href="#"><img src="images/footer_logo.png" alt=""></a>  &copy; 2013 | <a href="#">Privacy Policy</a> <br> <a href="http://www.zerotheme.com">Free Html5 Templates</a> by <a href="http://www.templatemonster.com/" rel="nofollow">TemplateMonster.com</a> <br> <a href="http://www.zerotheme.com">Free Responsive Themes</a> by <a href="http://www.zerotheme.com/" rel="nofollow">Zerotheme.com</a-->
-						</div>
-					</div>
-				</div>
-				<div class="clear"></div>
-			</div>
-		</footer>
+    <div class="zerogrid">
+        <div class="col-full">
+            <div class="wrap-col">
+                <div class="copy">
+                    <!--a onClick="goToByScroll('page1'); return false;" href="#"><img src="images/footer_logo.png" alt=""></a>  &copy; 2013 | <a href="#">Privacy Policy</a> <br> <a href="http://www.zerotheme.com">Free Html5 Templates</a> by <a href="http://www.templatemonster.com/" rel="nofollow">TemplateMonster.com</a> <br> <a href="http://www.zerotheme.com">Free Responsive Themes</a> by <a href="http://www.zerotheme.com/" rel="nofollow">Zerotheme.com</a
+                    -->
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+</footer>
 	</body>
 </html>

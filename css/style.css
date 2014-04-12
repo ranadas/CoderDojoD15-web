@@ -654,7 +654,11 @@ footer a:hover {
 
 .PlaceHtext {
 	position: relative;
-	margin-left: 480px;
-	top: 570px;
+	margin-left: 230px;
+	top: 100px;
 	font-size: 40px;
+}
+
+.PlaceHimg {
+margin-left: 380px;
 }

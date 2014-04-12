@@ -630,6 +630,14 @@ footer a:hover {
 	
 }
 
+.copyrightInfo {
+	color: #c9c9c9;
+ 	position: relative;
+	margin-left: 100px;
+	top: 57px;
+	font-size: 15px;
+}
+
 /**to top**/
 #toTop {
 	display:none;
@@ -650,4 +658,17 @@ footer a:hover {
 }
 #toTop:hover {
 	background-position: right 0;
+}
+
+/**PlaceHolder.html**/
+
+.PlaceHtext {
+	position: relative;
+	margin-left: 230px;
+	top: 100px;
+	font-size: 40px;
+}
+
+.PlaceHimg {
+margin-left: 380px;
 }

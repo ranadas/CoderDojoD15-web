@@ -9,6 +9,10 @@ input {
 	outline:  none !important;
 }
 
+#input{
+float:right;
+}
+
 
 html {
 	width: 100%;
@@ -28,8 +32,8 @@ font-size:25px;
 }
 
 #about-us-div{
-float:left;
 height:700px;
+width:726px;
 }
 
 body {

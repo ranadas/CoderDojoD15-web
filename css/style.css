@@ -9,6 +9,20 @@ input {
 	outline:  none !important;
 }
 
+#input{
+float:right;
+}
+
+.belts-text1{
+width:470px;
+Float:left
+}
+
+#beltImage{
+float:right;
+}
+
+
 
 html {
 	width: 100%;
@@ -28,8 +42,8 @@ font-size:25px;
 }
 
 #about-us-div{
-float:left;
 height:700px;
+width:726px;
 }
 
 body {
@@ -216,7 +230,7 @@ header h1 a img {
 /*Content*/
 .content {
 	padding-top: 25px;
-	text-align: center;
+	text-align: left;
 	position: relative;
 }
 
@@ -616,6 +630,14 @@ footer a:hover {
 	
 }
 
+.copyrightInfo {
+	color: #c9c9c9;
+ 	position: relative;
+	margin-left: 100px;
+	top: 57px;
+	font-size: 15px;
+}
+
 /**to top**/
 #toTop {
 	display:none;
@@ -636,4 +658,17 @@ footer a:hover {
 }
 #toTop:hover {
 	background-position: right 0;
+}
+
+/**PlaceHolder.html**/
+
+.PlaceHtext {
+	position: relative;
+	margin-left: 230px;
+	top: 100px;
+	font-size: 40px;
+}
+
+.PlaceHimg {
+margin-left: 380px;
 }

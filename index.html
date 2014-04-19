@@ -62,7 +62,7 @@
 				$(document).ready(function(){
 					$().UItoTop({ easingType: 'easeOutQuart' });
 				});
-				$("#Submit").click(function();
+				$("#Submit").click(function()
 				{
 				alert("Sent")
 				});
@@ -80,7 +80,7 @@
 								<ul class="sf-menu">
 									<li class="current men"><a onClick="goToByScroll('page1'); return false;" href="#">Home </a> <strong class="hover"></strong></li>
 									<li class="men1"><a onClick="goToByScroll('page2'); return false;" href="#">About</a><strong class="hover"></strong></li>
-									<li class=" men2"><a onClick="goToByScroll('page3'); return false;" href="#">Classes & Downloads</a> <strong class="hover"></strong></li>
+									<li class=" men2"><a onClick="goToByScroll('page3'); return false;" href="#">Classes & Mentors</a> <strong class="hover"></strong></li>
 									<li class=" men3"><a onClick="goToByScroll('page4'); return false;" href="#">Companies</a> <strong class="hover"></strong></li>
 									<li class=" men4"><a onClick="goToByScroll('page5'); return false;" href="#">Contact & Find us</a> <strong class="hover"></strong></li>
 								</ul>
@@ -95,23 +95,58 @@
 		</header>
 <!--=======content================================-->
 			<div id="page1" class="content">
-                <div class="zerogrid">
-                    <div class="col-full">
-                        <div class="wrap-col">
-                            <div id="aboutdiv">
-                                <h4>About</h4><br>
-                                <img src="images/arrow.png">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-		    </div>
+			<div class="zerogrid">
+			
+				<!--<div class="col-full">-->
+					<!--<div class="wrap-col">
+					</div>-->
+						<!--Added the top menu boxes --start-->
+						<div id="1aboutdiv" class="aboutdiv menudiv">
+								<h3>about</h3><br>
+								<a onClick="goToByScroll('page2'); return false;" href="#">
+								<img src="images/arrow.png"><br><br>
+								</a>
+								<div class="menudesc">If you want to get involved here's the lowdown</div>
+								
+						</div>
+						
+						<div id="1classdiv" class="classdiv menudiv">
+								<h3>classes</h3><br>
+								<a onClick="goToByScroll('page3'); return false;" href="#">
+								<img src="images/arrow.png"><br><br>
+								</a>
+								<div class="menudesc">See what we get up to and sign up for next term</div>
+						</div>
+						
+						<div id="1downloaddiv" class="downloaddiv menudiv">
+								<h3>download</h3><br>
+								<a onClick="goToByScroll('page4'); return false;" href="#">
+								<img src="images/arrow.png"><br><br>
+								</a>
+								<div class="menudesc">Download the useful resources for coder ninjas</div>
+						</div>
+						
+						<div id="1downloaddiv" class="contactdiv menudiv">
+								<h3>contact</h3><br>
+								<a onClick="goToByScroll('page5'); return false;" href="#">
+								<img src="images/arrow.png"><br><br>
+								</a>
+								<div class="menudesc">Find us and get in touch. Send an enquiry.</div>
+						
+						</div>
+					<div><br><br><br><br>
+					<p align="justify"  style="font-family:arial;color:white;font-size:15px">Hi! Welcome to the CoderDojo Dublin 15 Website with pages about the club for young computer programmers at Institute of Technology Blanchardstown, Dublin 15. This site provides information for parents, mentors and children about the classes, mentors, associated organizations and sponsors for the dojo.</p>
+					<br><br><br><br><br><br><br><br>
+					</div>
+				</div>
 		    <div id="page2" class="content">
-                <div id="about-title">About</div>
                 <div class="zerogrid">
                     <div class="col-full">
                         <div class="wrap-col">
+							<div id="about-title"><h4>About Us</h4></div>
+							
                             <div id="input">
+								<div class="text1">Send an enquiry.</div><br>
                                 <fieldset>
                                 <p> Name: <br>
                                 <input type="text" id="name"></p>
@@ -119,60 +154,30 @@
                                 <input type="text" id="email"></p>
                                 <p> Phone: <br>
                                 <input type="text" id="phone"></p>
-                                <p> Student <input type="checkbox" id="student"> Mentor <input type="checkbox" id="mentor"> </p>
-                                <p> <input type="checkbox" id="html"> HTML <input type="checkbox" id="htmlAdvanced"> HTML Advanced </p>
-                                <p> <input type="checkbox" id="scratch"> Scratch <input type="checkbox" id="scratchAdvanced"> Scratch Advanced </p>
-                                <p> <input type="checkbox" id="apps"> Apps <input type="checkbox" id="projectsAdvanced"> Projects Advanced </p>
+                                <p> Student <input type="radio" id="student"> Mentor <input type="radio" id="mentor"> </p>
+                                <p> <input type="checkbox" id="html"> HTML  <br>
+								<input type="checkbox" id="htmlAdvanced"> HTML Advanced <br>
+                                <input type="checkbox" id="scratch"> Scratch <br>
+								<input type="checkbox" id="scratchAdvanced"> Scratch Advanced <br>
+                                <input type="checkbox" id="apps"> Apps <br>
+								<input type="checkbox" id="projectsAdvanced"> Projects Advanced <br>
                                 <p> Companies Interested in sponsoring? </p>
                                 <p> Company Name : </br>
                                 <input type="text" id="Company Name"></p>
                                 <p> Message : </br>
                                 <textarea id="Message" rows="6"></textarea></p>
-                                <button id="Submit"> Submit </button>
+                                <button id="Submit" onClick="alert('Thank you for contacting us. We will get back to you soon!')"> Submit </button>
                                 </fieldset>
                             </div>
                             <div id="about-us-div">
-                                <div id="about-title-students">Students & Parents</div><p><br>
-                                CoderDojo is a non-profit organization run solely by volunteers. It teaches people aged 8-18 about <br>
-                                computer programming in a fun and relaxed way. Everybody is welcome to come and learn to write <br>
-                                website, create apps, make games and enjoy themselves. All you need is a laptop.</p><br>
-                                <p><br>
-                                <div id="about-title-mentors">Mentors</div><br>
-                                Here at CoderDojo we can never have enough mentors to help out. Anyone can be come a mentor but remember this is purely <br>
-                                voluntary. So if you are willing to give up your Saturday morning we will be more than happy. Knowledge of a programming <br>
-                                language is recommended but is not 100% necessary. Check out the enquiry form to the right.</p><br>
-
-                                Anthony Hayden </br>
-								Bernard Dunne </br>
-								Daniel </br>
-								David Gillen </br>
-								Fiona O' Brien </br>
-								Geraldine Gray </br>
-								Hongbo Sun </br>
-								Ivo Brett </br>
-								John Nolan </br>
-								Kevin </br>
-								Larry O'Brien - Scratch/Advanced Scratch</br>
-								Laurent C </br>
-								Laxminarsimha Reddy </br>
-							    Martin Gray </br>                                                       
-                                Neha Thethi </br>
-								Pradorock</br>                            
-                                Rana Das </br>                              
-                                Wai Yan Maung                                                        
-								<br><br>
-                                <div class="text1">Events</div><br>
-                                CoderDojo D15 is holding an open day for its second birthday. This is on the 26th of April. All are welcome. Come look at the work being done in all the classes and the
-                                code they have created specifically for the event. The open day will be held in CoderDojo D15 at the normal time of class 10:00 to 12:00
-                                <br>
-                                The next term of CoderDojo starts on the _____. If you want to take part you must sign up on this CoderDojo's  Eventbrite page. <br>
-                                    Linked <a href="http://www.eventbrite.ie/o/coderdojod15-itb-2187748787">-Here-</a>
-                                <br><br>
-
-                                <p><br>
-                                <div id="about-title-support">Supporting</div><br>
-                                Supporting helps CoderDojo a lot. Since CoderDojo is non-profit supporting and Donating is a huge help and we are incredibly grateful<br>
-                                Contact us to the left to get into contact</p>
+                                <div id="about-title-students">Students & Parents</div>
+								<p align="justify">CoderDojo is a non-profit organization run solely by volunteers. It teaches people aged 8-18 about computer programming in a fun and relaxed way. Everybody is welcome to come and learn to write website, create apps, make games and enjoy themselves. All you need is a laptop.</p>
+                                
+                                <div id="about-title-mentors">Mentors</div>
+                                <p align="justify">Here at CoderDojo we can never have enough mentors to help out. Anyone can be come a mentor but remember this is purely voluntary. So if you are willing to give up your Saturday morning we will be more than happy. Knowledge of a programming language is recommended but is not 100% necessary. Check out the enquiry form to the right.</p>
+								
+                                <div id="about-title-support">Supporting</div>
+                                <p align="justify">Supporting helps CoderDojo a lot. Since CoderDojo is non-profit supporting and Donating is a huge help and we are incredibly grateful.</p>
                             </div>
                         </div>
                     </div>
@@ -183,54 +188,81 @@
                 <div class="col-full">
                     <div class="wrap-col">
 
-                        <p align="left"  style="font-family:arial;color:white;font-size:40px;padding-top:10px">Classes And Mentors</p>
+                        <p align="left"><h4>Classes And Mentors</h4></p>
+						
+						<div id="input"><br>
+								<div class="text1">Mentors</div></br>
+								
+								Anthony	- HTML<br>
+								Bernard	- App Inventor<br>
+								Daniel - App Inventor<br>
+								David - Projects<br>
+								Fiona - Scratch<br>
+								Geraldine - HTML<br>
+								Hongbo - Projects<br>
+								Ivo	- HTML<br>
+								John - HTML<br>
+								Kevin - Projects<br>
+								Larry - Scratch<br>
+								Laurent	- App Inventor<br>
+								Laxminarsimha - Scratch<br>
+								Martin - HTML<br>
+								Neha - Projects<br>
+								Noah - HTML<br>
+								Rana - Projects<br>
+								Sam	- Scratch<br>
+								Wai Yan	- Projects<br>
 
-                        <p align="left"  style="font-family:arial;color:white;font-size:30px">Scratch</p><br>
-                        <p align="left"> Scratch is a multimedia authoring tool that can
-                            be used by students,teachers and parents for a range of educational
-                            and entertainment constructivist purposes from math and science projects
-                            , including simulations and visualizations ofexperiments, recording lectures
-                            with animated presentations, to social sciences animated stories, and interactive
-                            art and music.Simple games may be made with it, as well.</p>
 
-                        <p align="left"  style="font-family:arial;color:white;font-size:30px">HTML</p><br>
-                        <p align="left"> HTML or HyperText Markup Language is the standard markup language used to create web pages.HTML is written in the form of HTML elements
-                            consisting of tags enclosed in angle brackets (like html). HTML tags most commonly come in pairs like h1 and /h1., although some tags represent empty
-                            elements and so are unpaired, for example img. The first tag in a pair is the start tag, and the second tag is the end tag (they are also called opening
-                            tags and closing tags). Though not always necessary, it is best practice to append a slash to tags which are not paired with a closing tag.</p>
-                        <p align="left"  style="font-family:arial;color:white;font-size:30px">Advanced Scratch</p><br>
-                        <p align="left"> Advanced HTML or HyperText Markup Language is the standard markup language used to create web pages.HTML is written in the form of HTML
-                            elements consisting of tags enclosed in angle brackets (like html). HTML tags most commonly come in pairs like h1 and /h1., although some tags
-                            represent empty elements and so are unpaired, for example img. The first tag in a pair is the start tag, and the second tag is the end tag
-                            (they are also called opening tags and closing tags). Though not always necessary, it is best practice to append a slash to tags which are not paired
-                            with a closing tag.</p>
-                        <p align="left"  style="font-family:arial;color:white;font-size:30px">App_Inventor</p><br>
-                        <p align="left">It allows newcomers to computer programming to create software applications for the Android operating system (OS). It uses a graphical
-                            interface, very similar to Scratch and the StarLogo TNG user interface, which allows users to drag-and-drop visual objects to create an application
-                            that can run on Android devices. In creating App Inventor, Google drew upon significant prior research in educational computing, as well as work done
-                            within Google on online development environments.</p>
+								<br><br>
+								
+						<div class="text1">Events</div><br>
+                        <div style="width:200px;"><p align="justify">CoderDojo D15 is holding an open day for its second birthday. This is on the 26th of April. All are welcome. Come look at the work being done in all the classes and the code they have created specifically for the event. The open day will be held in CoderDojo D15 at the normal time of class 10:00 to 12:00. If you want to join, please sign up on this CoderDojo's <a href="http://www.eventbrite.ie/o/coderdojod15-itb-2187748787"><u>Eventbrite</u></a> page.</div>
+							
+						
+						
+						</div>
+						<br>
+						
+                        <h5>Scratch</h5><br>
+                        <p align="justify" style="width:70%;padding-bottom:25px"> Scratch is a multimedia authoring tool that can be used by students,teachers and parents for a range of educational and entertainment constructivist purposes from math and science projects , including simulations and visualizations of experiments, recording lectures with animated presentations, to social sciences animated stories, and interactive art and music.Simple games may be made with it, as well.</p>
 
-                        <p align="left"  style="font-family:arial;color:white;font-size:30px">Projects</p><br>
-                        <p align="left">We are making this website you are looking at, Its going very well and is going great!</p>
+                        <h5>HTML</h5><br>
+                        <p align="justify" style="width:70%;padding-bottom:25px"> HTML or HyperText Markup Language is the standard markup language used to create web pages.HTML is written in the form of HTML elements consisting of tags enclosed in angle brackets (like html). HTML tags most commonly come in pairs like h1 and /h1., although some tags represent empty elements and so are unpaired, for example img. The first tag in a pair is the start tag, and the second tag is the end tag (they are also called opening tags and closing tags). Though not always necessary, it is best practice to append a slash to tags which are not paired with a closing tag.</p>
+						
+                        <h5>Advanced Scratch</h5><br>
+                        <p align="justify" style="width:70%;padding-bottom:25px"> Advanced HTML or HyperText Markup Language is the standard markup language used to create web pages.HTML is written in the form of HTML elements consisting of tags enclosed in angle brackets (like html). HTML tags most commonly come in pairs like h1 and /h1., although some tags represent empty elements and so are unpaired, for example img. The first tag in a pair is the start tag, and the second tag is the end tag (they are also called opening tags and closing tags). Though not always necessary, it is best practice to append a slash to tags which are not paired with a closing tag.</p>
+						
+                        <h5>App_Inventor</h5><br>
+                        <p align="justify" style="width:70%;padding-bottom:25px">It allows newcomers to computer programming to create software applications for the Android operating system (OS). It uses a graphical interface, very similar to Scratch and the StarLogo TNG user interface, which allows users to drag-and-drop visual objects to create an application that can run on Android devices. In creating App Inventor, Google drew upon significant prior research in educational computing, as well as work done within Google on online development environments.</p>
 
-                        <p align="left"  style="font-family:arial;color:white;font-size:30px">Belts System</p><br>
-                        <div class="belts-text1">
-                            The belt and badge system is a new system that is being introduced <br>
-                            to CoderDojo D15. It includes giving children belts and badges as they<br>
-                            pass certain goals, hit set milestones or write a piece of code that stands above the rest. When you finish a class in CoderDojo D15 you will recieve a
-                            badge next to your name on your profile on the CoderDojo D15 official website. This will notify your peers of what you have done in
-                            each class and to what extent do you know your code. The belt system is a more prestigious system.
-                            In which we award children yellow, red, blue and possibly even black belts. The yellow belts will be awarded for a significant achievement in introduction
-                            classes. The red belts will be given for children who have passed above their peers in the more advanced classes. The blue belts will be given
-                            when a child has done an incredible achievement in the more advanced classes that shocked mentors. The black belts will only be awarded on very
-                            unique occasions. You have passed above the knowledge of your mentor and done something that stands out in the whole of CoderDojo D15. You might then be allowed
-                            to become a mentor! Inside these belts there will be a USB storage stick. The storage capacity will range from 2GB in the lower belts To 8GB in the black.
-                            These belts will notify your peers of your outstanding achievements in CoderDojo D15.
-                            <br><br>
+                        <h5>Projects</h5><br>
+                        <p align="justify" style="width:70%;padding-bottom:25px">We are making this website you are looking at, Its going very well and is going great!</p>
 
-                            DISCLAIMER:<br>
-                            This belt and badge system is unique to CoderDojo D15 and will not be recognised in other dojos. (except maybe in the cases of the Black belt)
-                        </div>
+                        <h5>Belts System</h5><br>
+                        <p align="justify" style="width:100%;">
+                        The belt and badge system is a new system that is being introduced to CoderDojo D15. It includes giving children belts and badges as they pass certain goals, hit set milestones or write a piece of code that stands above the rest. When you finish a class in CoderDojo D15 you will receive a badge next to your name on your profile on the CoderDojo D15 official website. This will notify your peers of what you have done in each class and to what extent do you know your code. The belt system is a more prestigious system. In which we award children yellow, blue, green, orange, red, purple and possibly even black belts. 
+                        <br><br>
+
+						<p align="justify" style="padding-bottom:25px;width:100%;">
+						At CoderDojo, we award USB Belts. The color of the belt and criteria for awarding it is given below:<br><br>
+						
+						<img src="images/yellow.jpg" height="20" width="20"><b>Yellow Belt</b> - Awarded for a significant achievement in introduction classes. <br><br>
+						
+						<img src="images/red.jpg" height="20" width="20"><b>Red Belt</b> - Awarded to children who have passed above their peers in the more advanced classes.<br><br>
+						
+						<img src="images/orange.jpg" height="20" width="20"><b>Orange Belt</b> - Has written a successful environmental app, game or website.<br><br>
+						
+						<img src="images/blue.jpg" height="20" width="20"><b>Blue Belt</b> - Awarded when a child has done an incredible achievement in the more advanced classes that shocked mentors. <br><br>
+						
+						<img src="images/black.jpg" height="20" width="20"><b>Black Belt</b> - Awarded on very unique occasions. For instance, if the child has produced an open source piece of code that is on github and is in use by 1 million people or more. Or you have passed above the knowledge of your mentor and done something that stands out in the whole of CoderDojo D15. You might then be allowed to become a mentor! <br><br>
+						
+						Inside these belts there will be a USB storage stick. The storage capacity will range from 2GB in the lower belts To 8GB in the black. These belts will notify your peers of your outstanding achievements in CoderDojo D15.
+						
+						
+						</p>
+                        DISCLAIMER:<br>
+                        This belt and badge system is unique to CoderDojo D15 and will not be recognised in other dojos. (except maybe in the cases of the Black belt)
                     </div>
                 </div>
             </div>
@@ -240,53 +272,43 @@
 			<div class="zerogrid">
                 <div class="col-full">
                     <div class="wrap-col">
-                        <h3>Company Donations</h3>
-                    </div>
-                </div>
-                <div class="text1">
-                    <p>This is CoderDojo D15 and we would like to welcome anyone who wants to participate and/or donate
-                        to us.</p>
+                        <h4>Company Donations</h4>
+                    <br><br>
+                <p align="justify" style="padding-bottom:25px">
+                    This is CoderDojo D15 and we would like to welcome anyone who wants to participate and/or donate
+                    to us.<br><br>
                     Donating will go towards buying things to enhance the kids experiences and immerse them deeper into the
                     world of technology. We would let them have at things like Arduino or Lego MindStorm. These are sets that
                     let children and adults alike delve into circuit building and programming. Creating their own circuits
-                    from their own ideas or simply building a standard circuit to learn. We would like to encourage companies
-                    to take part in donating as it is towards a great cause. The future IT in Ireland. This will give the children
-                    an early start and so they will be more knowledgeable in the subjects of software developing and circuitry when
-                    they leave school or maybe even take up a role in your company! Donation money will also go towards CoderDojo
-                    D15's "Belt" project, in which we give belts of different colour to kids that they can wear around their wrist.
-                    These will go up in traditional martial art fashion further enhancing the Dojo experience. But there is one more thing.
-                    The belts have a USB drive inserted into them with bigger storage space as the child develops more skills and reaches certain goals.
-                    We would like to thank ITB for funding our first set of belts which were the beginning of something truly special. These were our white belts,
-                    the starting grade in martial arts. We would also like to thank ITB again for letting us use their facilities to base coderdojo.
-                    It is a brilliant setting for the kids as this is where they might even go in the future or further education.
-                    All donations first go to the Hello World Foundation which is the fully registered charity that helped fund CoderDojo initially.
-                    This donation will then be sent on to the dojo of your choice. Thank you. We look forward to seeing
-                    the children digging in to the Arduinos, Lego MindStorms and Belts that you have kindly funded!
-                    <br><br>
-
-                    <h2>Thank you.</h2>
-                    <br>
-                    <br>
-                    <br>
-					<!--=======links to companies================================-->
+                    from their own ideas or simply building a standard circuit to learn. 
+					<br><br>We would like to encourage companies to take part in donating as it is towards a great cause. The future IT in Ireland. This will give the children an early start and so they will be more knowledgeable in the subjects of software developing and circuitry when they leave school or maybe even take up a role in your company! Donation money will also go towards CoderDojo D15's "Belt" project, in which we give belts of different colour to kids that they can wear around their wrist. These will go up in traditional martial art fashion further enhancing the Dojo experience. 
+					<br><br>But there is one more thing. The belts have a USB drive inserted into them with bigger storage space as the child develops more skills and reaches certain goals. We would like to thank ITB for funding our first set of belts which were the beginning of something truly special. These were our white belts, the starting grade in martial arts. We would also like to thank ITB again for letting us use their facilities to base coderdojo. It is a brilliant setting for the kids as this is where they might even go in the future or further education. All donations first go to the Hello World Foundation which is the fully registered charity that helped fund CoderDojo initially. This donation will then be sent on to the dojo of your choice. 
+					<br><br>Thank you. We look forward to seeing the children digging in to the Arduinos, Lego MindStorms and Belts that you have kindly funded!
+					</p><br>
 					
-					</div>
-
-
+					
+					
+					
+                    
+					<!--=======links to companies================================-->
+					<h5><center>Thank you.</center></h5><br><br>
+				
                 <div class="companies">
-                    <div class="col-1-4">
+                    <div class="col-1-3">
                         <div class="wrap-col">
-                            <img src="images/itb.jpg" alt="">
+							
+                            <p style="height: 100px"><img src="images/itb.jpg" alt=""></p>
 
                             <div class="text1">ITB</div>
                             Institute of Technology Blanchardsdown
                             <br>
                             <a href="http://www.itb.ie">Go to Site</a>
+							
                         </div>
                     </div>
-                    <div class="col-1-4">
+                    <div class="col-1-3">
                         <div class="wrap-col">
-                            <img src="images/helloworld.jpg" alt="">
+                            <p style="height: 100px"><img src="images/helloworld.jpg" alt=""></p>
 
                             <div class="text1">Hello World Foundation</div>
                             The fully registered charity that funded CoderDojo initially
@@ -294,12 +316,12 @@
                             <a href="http://helloworldfoundation.com">Go to Site</a>
                         </div>
                     </div>
-                    <div class="col-1-4">
+                    <div class="col-1-3">
                         <div class="wrap-col">
-                            <img src="images/BentleyLogo.PNG" alt="">
+                            <p style="height: 100px"><img src="images/BentleyLogo.PNG" alt=""></p>
                             <!--=======I need to figure out his company name================================-->
-                            <div class="text1">Bently Systems</div>
-                            Bently systems has donated many Lego Mindstorms and Arduinos
+                            <div class="text1">Bentley Systems</div>
+                            Bentley systems awarded us the STEM Grant and has also donated many Lego Mindstorms and Arduinos.
                             <br>
                             <a href="http://www.bentley.com/en-US/">Go to Site</a>
                         </div>
@@ -309,14 +331,15 @@
 			
 			</div>
 		</div>	
+		</div>
+                </div>
 				
 		<div id="page5" class="content">
             <div class="zerogrid">
                 <div class="col-full">
                     <div class="wrap-col">
-                        <h3>Contact & Find Us</h3><br><br>
-                    </div>
-                </div>
+                        <h4>Contact & Find Us</h4><br><br>
+                    
                 <div id="contentBox" style="margin:0px auto; width:100%">
                     <div id="column1" style="float:left; margin:50; width:60%;">
 
@@ -325,51 +348,33 @@
                         <br/>
                         <small><a
                                 href="https://maps.google.ie/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Block+C,+Institute+of+Technology+Blanchardstown,+Blanchardstown+Rd+N,+Dublin+15,+Ireland&amp;aq=0&amp;oq=i&amp;sll=53.4051,-6.3779&amp;sspn=0.031878,0.077162&amp;ie=UTF8&amp;hq=&amp;hnear=Block+C,+Institute+of+Technology+Blanchardstown,+Blanchardstown+Rd+N,+Dublin+15,+County+Dublin&amp;t=m&amp;z=14&amp;ll=53.405484,-6.378681"
-                                style="color:#0000FF;text-align:left">View Larger Map</a></small>
-                        <div class="text1"><br>
-
-                            <h3>Directions</h3> <br>
-                            <b><p>Coderdojo is in ITB near the Junction of the M50 and the N3.</b><br></div>
-                        Here are directions from:<br><br>
-                        <b>M50 Southbound</b><br>
-                        Southbound on the M50 take Exit 6 for Blanchardstown(N3).Follow the slip road and take N3 towards Navan/Cavan. Travel straight along N3 (through 2 sets of
-                        traffic lights) take the second slip road for the Blanchardstown town Centre.At the top of the slip road, take a right (follow Institute of Technology sign)
-                        follow this road to the next roundabout & take the 1st exit which is the entrance<br> to ITB.
-                        <br><br>
-                        <b>M50 Northbound</b><br>
-                        Northbound on the M50 take Exit 6 for Blanchardstown(N3).Follow the slip road & take N3 towards Navan/Cavan.Travel straight along N3 (through 2 sets of
-                        traffic lights) take the second slip road for the Blanchardstown town Centre.At thetop of the slip road,take a right (follow Institute of<br> Technology
-                        sign) follow this road to the next roundabout & take the 1st exit which is the entrance to ITB.
-                        <br><br>
-
-                        <b>Travelling from the City Centre</b><br>
-                        Head for the N3 (main Navan/Cavan road).The first roundabout you will come to is at the Halfway House Pub (on the right hand side).Go straight through the
-                        roundabout continuing on the N3.Travel straight along N3 through a set of traffic lights (Travelodge Hotel is on the right hand side). The next roundabout
-                        is the M50 roundabout.Go directly through, continuing on the N3.Travel straight along N3 (through 2 sets of traffic lights). Take the second slip road for
-                        the Blanchardstown town Centre.At the top of the slip road,take a right (follow Institute of Technology sign) travel along this road to the next roundabout
-                        & take the 1st exit which is the entrance to ITB.
-                        <br><br>
-                        <b>Travelling from the direction of Navan/Cavan.</b><br>
-                        Travelling along the N3 take the slip road for the Blanchardstown Town Centre.When you reach the top of the slip road,turn right.Continue straight and turn
-                        left at traffic lights on to Blanchardstown Road North.Travel along this road for approx. 1 mile to the next roundabout & take the 1st exit which is the
-                        entrance to ITB.
-
-
-                        <br><br>
-
+                                style="color:#0000FF;text-align:left">View Larger Map</a></small><br>
+						<br>
                         <div class="text1">
-                            Time 10am - 12pm Saturdays <br><br>
-
-                            Location: <b>Institute of Technology Blanchardstown (Dublin 15).</b>
-                            <br><br>
-                            Tel: Ask Larry?
-                            </p>
-
+                            <b>Time</b>: 10am - 12pm Saturdays <br><br>
+                            <b>Location</b>: Institute of Technology Blanchardstown (Dublin 15)
                         </div>
+						<div class="text1"><br>
+						
+                            <b>Directions</b>: Coderdojo is in ITB near the Junction of the M50 and the N3.<br></div>
+                        <br><br>Here are directions from:<br><br>
+						
+                        <b>M50 Southbound</b><br>
+                        <p align="justify">Southbound on the M50 take Exit 6 for Blanchardstown(N3).Follow the slip road and take N3 towards Navan/Cavan. Travel straight along N3 (through 2 sets of traffic lights) take the second slip road for the Blanchardstown town Centre.At the top of the slip road, take a right (follow Institute of Technology sign) follow this road to the next roundabout & take the 1st exit which is the entrance to ITB.</p>
+                        
+                        <b>M50 Northbound</b><br>
+                        <p align="justify">Northbound on the M50 take Exit 6 for Blanchardstown(N3).Follow the slip road & take N3 towards Navan/Cavan.Travel straight along N3 (through 2 sets of traffic lights) take the second slip road for the Blanchardstown town Centre.At the top of the slip road,take a right (follow Institute of Technology sign) follow this road to the next roundabout & take the 1st exit which is the entrance to ITB.</p>
+                        
+                        <b>Travelling from the City Centre</b><br>
+                        <p align="justify">Head for the N3 (main Navan/Cavan road).The first roundabout you will come to is at the Halfway House Pub (on the right hand side).Go straight through the roundabout continuing on the N3.Travel straight along N3 through a set of traffic lights (Travelodge Hotel is on the right hand side). The next roundabout is the M50 roundabout.Go directly through, continuing on the N3.Travel straight along N3 (through 2 sets of traffic lights). Take the second slip road for the Blanchardstown town Centre.At the top of the slip road,take a right (follow Institute of Technology sign) travel along this road to the next roundabout & take the 1st exit which is the entrance to ITB.</p>
+                        
+                        <b>Travelling from the direction of Navan/Cavan.</b><br>
+                        <p align="justify">Travelling along the N3 take the slip road for the Blanchardstown Town Centre.When you reach the top of the slip road,turn right.Continue straight and turn left at traffic lights on to Blanchardstown Road North.Travel along this road for approx. 1 mile to the next roundabout & take the 1st exit which is the entrance to ITB.</p>
+
                     </div>
 
                     <div id="column2" style="float:left; margin:50;width:40%;">
-                        <div class="text1">Ask a Question</div>
+                        <div class="text1" style="margin-left:10px">Ask a Question</div>
                         <form id="form" action="">
                             <div class="success_wrapper">
                                 <div class="success">Contact form submitted!<br>
@@ -380,7 +385,10 @@
                                 <label class="name">
                                     <input type="text" value="Name:">
                                     <br class="clear">
-                                    <span class="error error-empty">*This is not a valid name.</span><span class="empty error-empty">*This field is required.</span> </label>
+                                    <span class="error error-empty">*This is not a valid name.</span>
+									<span class="empty error-empty">*This field is required.</span>
+								</label>
+								
                                 <label class="email">
                                     <input type="text" value="E-mail:">
                                     <br class="clear">
@@ -409,17 +417,20 @@
 
                 <div class="clear"></div>
             </div>
+			</div>
+           </div>
 		</div>
-
+	</div>
 <!--==============================footer=================================-->
 <footer>
-		<span class="copyrightInfo">© Copyright 2014 - CoderDojoD15. Go back up. This is the footer.</span>
-    <div class="social">
+	
+		<div class="copyrightInfo">© Copyright 2014 - CoderDojoD15. <br><br>Above All, Be Cool.</div>
+    <div id="input">
         <a href="https://twitter.com/CoderDojoD15" title="Visit @CoderDojoD15 on Twitter!" target="_blank">
             <img src="images/twitter.png" alt="Twitter icon" class="icon">
         </a>
 
-        <a href="PlaceHolder.html" title="Visit us on Facebook!" target="_blank">
+        <a href="connect.html" title="Visit us on Facebook!" target="_blank">
             <img src="images/facebook.png" alt="Facebook icon" class="icon">
         </a>
 
@@ -427,26 +438,16 @@
             <img src="images/youtube.png" alt="YouTube icon" class="icon">
         </a>
 
-        <a href="PlaceHolder.html" title="Visit the dojo on Pinterest!" target="_blank">
+        <a href="connect.html" title="Visit the dojo on Pinterest!" target="_blank">
             <img src="images/pinterest.png" alt="Pinterest icon" class="icon">
         </a>
 
-        <a href="PlaceHolder.html" title="Visit CoderDojoITB on Google Plus!" target="_blank">
+        <a href="connect.html" title="Visit CoderDojoITB on Google Plus!" target="_blank">
             <img src="images/googleplus.png" alt="Google Plus icon" class="icon">
         </a>
 
     </div>
-    <div class="zerogrid">
-        <div class="col-full">
-            <div class="wrap-col">
-                <div class="copy">
-                    <!--a onClick="goToByScroll('page1'); return false;" href="#"><img src="images/footer_logo.png" alt=""></a>  &copy; 2013 | <a href="#">Privacy Policy</a> <br> <a href="http://www.zerotheme.com">Free Html5 Templates</a> by <a href="http://www.templatemonster.com/" rel="nofollow">TemplateMonster.com</a> <br> <a href="http://www.zerotheme.com">Free Responsive Themes</a> by <a href="http://www.zerotheme.com/" rel="nofollow">Zerotheme.com</a
-                    -->
-                </div>
-            </div>
-        </div>
-        <div class="clear"></div>
-    </div>
+    
 </footer>
 	</body>
 </html>

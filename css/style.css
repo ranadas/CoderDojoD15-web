@@ -11,8 +11,47 @@ input {
 
 #input{
 float:right;
+overflow: auto;
 }
 
+.menudiv{
+	height:50%;
+	width:21.5%;
+	padding-left:10px;
+	padding-right:10px;
+	padding-bottom:20px;
+	padding-top:20px;
+	text-align:center;
+	display:inline-block;
+	border:5px solid;
+	border-color: #334960;
+}
+
+.aboutdiv{
+	background-color: #F17C72;
+	padding-top:100px;
+}
+
+.classdiv{
+	background-color: #32AC97;
+	padding-top:100px;
+}
+
+.downloaddiv{
+	background-color: #7F4C75;
+	padding-top:100px;
+}
+
+.contactdiv{
+	background-color: #3F9FC9;
+	padding-top:100px;
+}
+
+
+.menudesc{
+	font-family:"Times New Roman";
+	font-size:14px;
+}
 .belts-text1{
 width:470px;
 Float:left
@@ -34,7 +73,10 @@ text-decoration:none;
 }
 
 #about-title, #about-title-students, #about-title-mentors, #about-title-support{
-font-size:25px;
+font-size:30px;
+text-align: left;
+padding-top: 20px;
+padding-bottom: 20px;
 }
 
 * {
@@ -43,7 +85,7 @@ font-size:25px;
 
 #about-us-div{
 height:700px;
-width:726px;
+width:70%;
 }
 
 body {
@@ -72,6 +114,16 @@ h1, h2, h3, h4, h5, h6 {
 	color: #ecedef;
 }
 
+h5{
+	font-size: 30px;
+	text-align: left;
+	
+}
+h4{
+	font-size: 40px;
+	line-height: 60px;
+	text-align: left;
+}
 h2 {
 	font-size: 40px;
 	padding-top: 101px;
@@ -80,10 +132,11 @@ h2 {
 }
 
 h3 {
-	font-size: 25px;
+	font-size: 45px;
 	line-height: 54px;
-	text-align: left;
+	text-align: center;
 }
+
 heading-mentor {
 	font-size: 40px;
 	line-height: 60px;
@@ -307,7 +360,7 @@ header.page5 .men4 .hover{
 
 #page2 {
 	background-color: #f17c72;
-	padding-top: 230px;
+	padding-top: 100px;
 	padding-bottom: 500px;
 	padding-bottom: 190px;
 }
@@ -324,7 +377,7 @@ header.page2 .hover {
 
 #page3 {
 	background-color: #32ac97;
-	padding-top: 230px;
+	padding-top: 100px;
 }
 
 header.page3{
@@ -501,7 +554,7 @@ header.page5 .hover {
 }
 
 #page4 {
-	padding-top: 231px;
+	padding-top: 100px;
 	padding-bottom: 186px;
 }
 
@@ -534,7 +587,7 @@ header.page5 .hover {
 }
 
 #page5 {
-	padding-top: 230px;
+	padding-top: 100px;
 	padding-bottom: 190px;
 }
 
@@ -605,11 +658,16 @@ address dd span {
 /************Footer***********/
 
 footer {
-	display: block;
+	
+   position:absolute;
+   bottom:0;
+   width:77%;
+   height:170px;   /* Height of the footer */
+   margin-left: 110px;
+   margin-right: 110px;
+	
 }
 
-footer {
-}
 
 footer a:hover {
 	color: #f17c72;
@@ -626,7 +684,7 @@ footer a:hover {
 .social {
 	position: relative;
 	margin-left: 980px;
-	top: 34px;
+	
 	
 }
 
@@ -634,9 +692,11 @@ footer a:hover {
 	color: #c9c9c9;
  	position: relative;
 	margin-left: 100px;
-	top: 57px;
+	top: 25px;
 	font-size: 15px;
 }
+
+
 
 /**to top**/
 #toTop {

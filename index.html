@@ -14,7 +14,6 @@
 		<script src="js/jquery.js"></script>
 		<script src="js/jquery-migrate-1.1.1.js"></script>
 		<script src="js/superfish.js"></script>
-		<script src="js/forms.js"></script>
 		<script src="js/jquery.ui.totop.js"></script>
 		<script src="js/jquery.equalheights.js"></script>
 		<script src="js/jquery.easing.1.3.js"></script>
@@ -375,7 +374,7 @@
 
                     <div id="column2" style="float:left; margin:50;width:40%;">
                         <div class="text1" style="margin-left:10px">Ask a Question</div>
-                        <form id="form" action="">
+                        <form id="form" action="questionform.php" method="post">
                             <div class="success_wrapper">
                                 <div class="success">Contact form submitted!<br>
                                     <strong>We will be in touch soon.</strong>
@@ -383,26 +382,27 @@
                             </div>
                             <fieldset>
                                 <label class="name">
-                                    <input type="text" value="Name:">
+                                    <input type="text" value="Name:" name="name">
                                     <br class="clear">
                                     <span class="error error-empty">*This is not a valid name.</span>
 									<span class="empty error-empty">*This field is required.</span>
 								</label>
 								
                                 <label class="email">
-                                    <input type="text" value="E-mail:">
+                                    <input type="text" value="E-mail:" name="email">
                                     <br class="clear">
                                     <span class="error error-empty">*This is not a valid email address.</span>
                                     <span class="empty error-empty">*This field is required.</span>
                                 </label>
                                 <label class="message">
-                                    <textarea>Message:</textarea>
+                                    <textarea name="message">Message:</textarea>
                                     <br class="clear">
                                     <span class="error">*The message is too short.</span> <span class="empty">*This field is required.</span> </label>
 
                                 <div class="clear"></div>
-                                <div class="btns"><a data-type="submit" class="link1">Send</a>
-
+                                <div class="btns">
+                                    <input type="submit" name="submit" value="Submit" />
+                                    <!--<a data-type="submit" class="link1">Send</a>-->
                                     <div class="clear"></div>
                                 </div>
                             </fieldset>

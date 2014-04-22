@@ -1,11 +1,17 @@
 <?php
-error_reporting(E_ALL);
 
-    //if(isset($_POST['submit']) {
+    function flush_buffers(){
+        ob_end_flush();
+        ob_flush();
+        flush();
+        ob_start();
+    }
 
-    function died($error) {
+    error_reporting(E_ALL);
 
-            // your error code can go here
+    if(isset($_POST['submit'])) {
+
+        function died($error) {
             echo "We are very sorry, but there were error(s) found with the form you submitted. ";
             echo "These errors appear below.<br /><br />";
             echo $error."<br /><br />";
@@ -13,23 +19,31 @@ error_reporting(E_ALL);
             die();
         }
 
-        echo("First name: " . $_POST['name'] . "<br />\n");
-        echo("Last name: " . $_POST['email'] . "<br />\n");
-        echo("Last name: " . $_POST['message'] . "<br />\n");
-
-
         $email_to="rana.pratap.das@gmail.com";
-        $email_subject="question from website";
+        $email_subject="Question from CoderDojo Website";
 
-        $email_from = $_POST['email']; //
-        $message = $_POST['message']; // required
+        $name = $_POST['name'];
+        $email_from = $_POST['email'];
+        $message = $_POST['message'];
 
         // create email headers
-        $headers = 'From: '.$email_from."\r\n".
+        $headers = 'From: '.$name." <".$email_from.">\r\n".
         'Reply-To: '.$email_from."\r\n" .
         'X-Mailer: PHP/' . phpversion();
 
-        @mail($email_to, $email_subject, $message, $headers);
+        $sent = @mail($email_to, $email_subject, $message, $headers);
 
-    //}
+//        echo("name: " . $_POST['name'] . "<br />\n");
+//        echo("email: " . $_POST['email'] . "<br />\n");
+//        echo("message: " . $_POST['message'] . "<br />\n");
+//        echo("sent: " . $sent . "<br />\n");
+
+        if ($sent) {
+            header('Location: ' . $_SERVER['HTTP_REFERER']);
+            exit();
+        } else {
+            echo("We encountered an error sending your mail");
+        }
+    }
+
 ?>

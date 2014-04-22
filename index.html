@@ -14,7 +14,6 @@
 		<script src="js/jquery.js"></script>
 		<script src="js/jquery-migrate-1.1.1.js"></script>
 		<script src="js/superfish.js"></script>
-		<script src="js/forms.js"></script>
 		<script src="js/jquery.ui.totop.js"></script>
 		<script src="js/jquery.equalheights.js"></script>
 		<script src="js/jquery.easing.1.3.js"></script>
@@ -136,7 +135,7 @@
 						</div>
 					<div><br><br><br><br>
 					<p align="justify"  style="font-family:arial;color:white;font-size:15px">Hi! Welcome to the CoderDojo Dublin 15 Website with pages about the club for young computer programmers at Institute of Technology Blanchardstown, Dublin 15. This site provides information for parents, mentors and children about the classes, mentors, associated organizations and sponsors for the dojo.</p>
-					<br><br><br><br><br><br><br><br>
+					<br><br><br><br><br>
 					</div>
 				</div>
 		    <div id="page2" class="content">
@@ -144,31 +143,38 @@
                     <div class="col-full">
                         <div class="wrap-col">
 							<div id="about-title"><h4>About Us</h4></div>
-							
+                            <form id="formenquiry" action="enquiry.php" method="post">
                             <div id="input">
 								<div class="text1">Send an enquiry.</div><br>
                                 <fieldset>
                                 <p> Name: <br>
-                                <input type="text" id="name"></p>
+                                <input type="text" id="name" name="name"></p>
                                 <p> Email: <br>
-                                <input type="text" id="email"></p>
+                                <input type="text" id="email" name="email"></p>
                                 <p> Phone: <br>
-                                <input type="text" id="phone"></p>
-                                <p> Student <input type="radio" id="student"> Mentor <input type="radio" id="mentor"> </p>
-                                <p> <input type="checkbox" id="html"> HTML  <br>
-								<input type="checkbox" id="htmlAdvanced"> HTML Advanced <br>
-                                <input type="checkbox" id="scratch"> Scratch <br>
-								<input type="checkbox" id="scratchAdvanced"> Scratch Advanced <br>
-                                <input type="checkbox" id="apps"> Apps <br>
-								<input type="checkbox" id="projectsAdvanced"> Projects Advanced <br>
+                                <input type="text" id="phone" name="phone"></p>
+                                <p>
+                                    Student <input type="radio" id="student" name="mentor_student" value="student">
+                                    Mentor <input type="radio" id="mentor" name="mentor_student" value="mentor">
+                                </p>
+                                <p>
+                                    <input type="checkbox" id="html" name="topic[]" value="HTML"> HTML  <br>
+								    <input type="checkbox" id="htmlAdvanced" name="topic[]" value="HTML Advanced"> HTML Advanced <br>
+                                    <input type="checkbox" id="scratch" name="topic[]" value="Scratch"> Scratch <br>
+								    <input type="checkbox" id="scratchAdvanced" name="topic[]"> Scratch Advanced <br>
+                                    <input type="checkbox" id="apps" name="topic[]" value="Scratch Advanced"> Apps <br>
+								    <input type="checkbox" id="projectsAdvanced" name="topic[]" value="Projects Advanced"> Projects Advanced <br>
+                                </p>
                                 <p> Companies Interested in sponsoring? </p>
                                 <p> Company Name : </br>
-                                <input type="text" id="Company Name"></p>
+                                <input type="text" id="Company Name" name="company"></p>
                                 <p> Message : </br>
-                                <textarea id="Message" rows="6"></textarea></p>
-                                <button id="Submit" onClick="alert('Thank you for contacting us. We will get back to you soon!')"> Submit </button>
+                                <textarea id="Message" rows="6" name="message"></textarea></p>
+                                <input type="submit" name="submit" value="Submit" />
+                                <!--<button id="Submit" onClick="alert('Thank you for contacting us. We will get back to you soon!')"> Submit </button>-->
                                 </fieldset>
                             </div>
+                            </form>
                             <div id="about-us-div">
                                 <div id="about-title-students">Students & Parents</div>
 								<p align="justify">CoderDojo is a non-profit organization run solely by volunteers. It teaches people aged 8-18 about computer programming in a fun and relaxed way. Everybody is welcome to come and learn to write website, create apps, make games and enjoy themselves. All you need is a laptop.</p>
@@ -230,7 +236,7 @@
                         <h5>HTML</h5><br>
                         <p align="justify" style="width:70%;padding-bottom:25px"> HTML or HyperText Markup Language is the standard markup language used to create web pages.HTML is written in the form of HTML elements consisting of tags enclosed in angle brackets (like html). HTML tags most commonly come in pairs like h1 and /h1., although some tags represent empty elements and so are unpaired, for example img. The first tag in a pair is the start tag, and the second tag is the end tag (they are also called opening tags and closing tags). Though not always necessary, it is best practice to append a slash to tags which are not paired with a closing tag.</p>
 						
-                        <h5>Advanced Scratch</h5><br>
+                        <h5>Advanced HTML</h5><br>
                         <p align="justify" style="width:70%;padding-bottom:25px"> Advanced HTML or HyperText Markup Language is the standard markup language used to create web pages.HTML is written in the form of HTML elements consisting of tags enclosed in angle brackets (like html). HTML tags most commonly come in pairs like h1 and /h1., although some tags represent empty elements and so are unpaired, for example img. The first tag in a pair is the start tag, and the second tag is the end tag (they are also called opening tags and closing tags). Though not always necessary, it is best practice to append a slash to tags which are not paired with a closing tag.</p>
 						
                         <h5>App_Inventor</h5><br>
@@ -375,7 +381,7 @@
 
                     <div id="column2" style="float:left; margin:50;width:40%;">
                         <div class="text1" style="margin-left:10px">Ask a Question</div>
-                        <form id="form" action="">
+                        <form id="form" action="questionform.php" method="post">
                             <div class="success_wrapper">
                                 <div class="success">Contact form submitted!<br>
                                     <strong>We will be in touch soon.</strong>
@@ -383,26 +389,27 @@
                             </div>
                             <fieldset>
                                 <label class="name">
-                                    <input type="text" value="Name:">
+                                    <input type="text" value="Name:" name="name">
                                     <br class="clear">
                                     <span class="error error-empty">*This is not a valid name.</span>
 									<span class="empty error-empty">*This field is required.</span>
 								</label>
 								
                                 <label class="email">
-                                    <input type="text" value="E-mail:">
+                                    <input type="text" value="E-mail:" name="email">
                                     <br class="clear">
                                     <span class="error error-empty">*This is not a valid email address.</span>
                                     <span class="empty error-empty">*This field is required.</span>
                                 </label>
                                 <label class="message">
-                                    <textarea>Message:</textarea>
+                                    <textarea name="message">Message:</textarea>
                                     <br class="clear">
                                     <span class="error">*The message is too short.</span> <span class="empty">*This field is required.</span> </label>
 
                                 <div class="clear"></div>
-                                <div class="btns"><a data-type="submit" class="link1">Send</a>
-
+                                <div class="btns">
+                                    <input type="submit" name="submit" value="Submit" />
+                                    <!--<a data-type="submit" class="link1">Send</a>-->
                                     <div class="clear"></div>
                                 </div>
                             </fieldset>

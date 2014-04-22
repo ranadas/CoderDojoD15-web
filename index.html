@@ -20,6 +20,7 @@
 		<script src="js/jquery.ui.totop.js"></script>
 		<script src="js/tms-0.4.1.js"></script>
 		<script src="js/css3-mediaqueries.js"></script>
+        <script src="js/jquery.h5validate.js"></script>
 		<script>
 			$(document).ready(function(){
 				$('.slider_wrapper')._TMS({
@@ -38,8 +39,15 @@
 					waitBannerAnimation:false,
 					progressBar:false
 				});
+                $('questionform').h5Validate();
+                $().UItoTop({ easingType: 'easeOutQuart' });
 			});
 			$(document).ready(function(){
+//                $('#send-question-email').click(function() {
+//                    $('#questionform').submit();
+//                    //alert("wooo hoooooo");
+//                });
+
 				!function(){
 			         var map=[] ,names=[],win=$(window) ,header=$('header'),currClass
 			         $('.content').each(function(n){
@@ -58,13 +66,6 @@
 			function goToByScroll(id){
 				$('html,body').animate({scrollTop: $("#"+id).offset().top},'slow');
 				}
-				$(document).ready(function(){
-					$().UItoTop({ easingType: 'easeOutQuart' });
-				});
-				$("#Submit").click(function()
-				{
-				alert("Sent")
-				});
 		</script>
 		
 	</head>
@@ -379,47 +380,44 @@
 
                     </div>
 
-                    <div id="column2" style="float:left; margin:50;width:40%;">
+                    <div id="column2" style="float:left; margin:70;width:40%;">
                         <div class="text1" style="margin-left:10px">Ask a Question</div>
-                        <form id="form" action="questionform.php" method="post">
-                            <div class="success_wrapper">
-                                <div class="success">Contact form submitted!<br>
-                                    <strong>We will be in touch soon.</strong>
-                                </div>
-                            </div>
+                        <form id="questionform" action="questionform.php" method="post">
+                            <!--<div class="success_wrapper">-->
+                                <!--<div class="success">Contact form submitted!<br>-->
+                                    <!--<strong>We will be in touch soon.</strong>-->
+                                <!--</div>-->
+                            <!--</div>-->
                             <fieldset>
                                 <label class="name">
-                                    <input type="text" value="Name:" name="name">
+                                    <!--<input type="text" name="name" required placeholder="Enter Full Name">-->
+                                    <input id="questionform_name" name="questionform_name"
+                                           type="text" placeholder="Enter Full Name"
+                                           title="Your name is required." required style='width:250px;'/>
                                     <br class="clear">
-                                    <span class="error error-empty">*This is not a valid name.</span>
-									<span class="empty error-empty">*This field is required.</span>
 								</label>
-								
-                                <label class="email">
-                                    <input type="text" value="E-mail:" name="email">
+                                <div class="clear"></div>
+                                <label class="questionform_email">
+                                    <input type="email" id="questionform_email" name="questionform_email" class="h5-email" placeholder="Enter a valid email address"
+                                            required style='width:250px;'>
                                     <br class="clear">
-                                    <span class="error error-empty">*This is not a valid email address.</span>
-                                    <span class="empty error-empty">*This field is required.</span>
                                 </label>
                                 <label class="message">
-                                    <textarea name="message">Message:</textarea>
+                                    <textarea name="questionform_message" required placeholder="message"
+                                              required style='width:300px;' rows=10;></textarea>
                                     <br class="clear">
-                                    <span class="error">*The message is too short.</span> <span class="empty">*This field is required.</span> </label>
-
+                                </label>
                                 <div class="clear"></div>
+                                <!--<input type="range" size="2" name="satisfaction" min="1" max="5" value="3">-->
                                 <div class="btns">
-                                    <input type="submit" name="submit" value="Submit" />
-                                    <!--<a data-type="submit" class="link1">Send</a>-->
+                                    <!--<input id="round" type="submit" value="Send Email!" />-->
+                                    <input type="submit" name="submit" value="Send" id="submit" />
+                                    <!--<a data-type="submit" class="link1" id="send-question-email">Send</a>-->
                                     <div class="clear"></div>
                                 </div>
                             </fieldset>
                         </form>
-
                         <br>
-
-                      
-
-
                 </div>
 
                 <div class="clear"></div>

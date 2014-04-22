@@ -22,9 +22,9 @@
         $email_to="rana.pratap.das@gmail.com";
         $email_subject="Question from CoderDojo Website";
 
-        $name = $_POST['name'];
-        $email_from = $_POST['email'];
-        $message = $_POST['message'];
+        $name = $_POST['questionform_name'];
+        $email_from = $_POST['questionform_email'];
+        $message = $_POST['questionform_message'];
 
         // create email headers
         $headers = 'From: '.$name." <".$email_from.">\r\n".
@@ -33,9 +33,9 @@
 
         $sent = @mail($email_to, $email_subject, $message, $headers);
 
-//        echo("name: " . $_POST['name'] . "<br />\n");
-//        echo("email: " . $_POST['email'] . "<br />\n");
-//        echo("message: " . $_POST['message'] . "<br />\n");
+//        echo("name: " . $name . "<br />\n");
+//        echo("email: " . $email_from . "<br />\n");
+//        echo("message: " . $message . "<br />\n");
 //        echo("sent: " . $sent . "<br />\n");
 
         if ($sent) {

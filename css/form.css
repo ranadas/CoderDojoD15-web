@@ -45,11 +45,6 @@ padding-top: 6px;
 	margin-left: 10px;
 }
 
-
-
-
-
-
 #form .error, #form .empty {
 	color: #FF0000;
 	display: none;
@@ -135,4 +130,25 @@ padding-top: 6px;
 
 .success_wrapper {
 	position: relative;	
+}
+
+input:required:invalid, input:focus:invalid {
+    background-image: url("../images/invalid.png");
+    background-position: right top;
+    background-repeat: no-repeat;
+}
+input:required:valid {
+    background-image: url("../images/valid.png");
+    background-position: right top;
+    background-repeat: no-repeat;
+}
+#submit {
+    color: #fff;
+    font-size: 0;
+    width: 135px;
+    height: 60px;
+    border: none;
+    margin: 0;
+    padding: 0;
+    background: #0c0 url("../images/send-now.gif") 0 0 no-repeat;
 }

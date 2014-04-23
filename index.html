@@ -40,6 +40,7 @@
 					progressBar:false
 				});
                 $('questionform').h5Validate();
+                $('formenquiry').h5Validate();
                 $().UItoTop({ easingType: 'easeOutQuart' });
 			});
 			$(document).ready(function(){
@@ -126,7 +127,7 @@
 								<div class="menudesc">Download the useful resources for coder ninjas</div>
 						</div>
 						
-						<div id="1downloaddiv" class="contactdiv menudiv">
+						<div id="1contactdiv" class="contactdiv menudiv">
 								<h3>contact</h3><br>
 								<a onClick="goToByScroll('page5'); return false;" href="#">
 								<img src="images/arrow.png"><br><br>
@@ -148,31 +149,27 @@
                             <div id="input">
 								<div class="text1">Send an enquiry.</div><br>
                                 <fieldset>
-                                <p> Name: <br>
-                                <input type="text" id="name" name="name"></p>
-                                <p> Email: <br>
-                                <input type="text" id="email" name="email"></p>
-                                <p> Phone: <br>
-                                <input type="text" id="phone" name="phone"></p>
+                                <p> Name: <br> <input type="text" id="enquiry_name" name="enquiry_name" required placeholder="Enter Full Name" title="Your name is required." style='width:200px;'></p>
+                                <p> Email: <br> <input type="email" id="enquiry_email" name="enquiry_email" required placeholder="Enter email address" title="Enter a valid email address." style='width:200px;'></p>
+                                <p> Phone: <br><input type="tel" id="enquiry_phone" name="enquiry_phone" required placeholder="Enter phone number" title="Enter a valid phone." style='width:200px;'></p>
+
                                 <p>
-                                    Student <input type="radio" id="student" name="mentor_student" value="student">
+                                    Student <input type="radio" id="student" name="mentor_student" value="student" checked>
                                     Mentor <input type="radio" id="mentor" name="mentor_student" value="mentor">
                                 </p>
                                 <p>
                                     <input type="checkbox" id="html" name="topic[]" value="HTML"> HTML  <br>
 								    <input type="checkbox" id="htmlAdvanced" name="topic[]" value="HTML Advanced"> HTML Advanced <br>
                                     <input type="checkbox" id="scratch" name="topic[]" value="Scratch"> Scratch <br>
-								    <input type="checkbox" id="scratchAdvanced" name="topic[]"> Scratch Advanced <br>
-                                    <input type="checkbox" id="apps" name="topic[]" value="Scratch Advanced"> Apps <br>
+								    <input type="checkbox" id="scratchAdvanced" name="topic[]" value="Scratch Advanced"> Scratch Advanced <br>
+                                    <input type="checkbox" id="apps" name="topic[]" value="Apps"> Apps <br>
 								    <input type="checkbox" id="projectsAdvanced" name="topic[]" value="Projects Advanced"> Projects Advanced <br>
                                 </p>
-                                <p> Companies Interested in sponsoring? </p>
-                                <p> Company Name : </br>
-                                <input type="text" id="Company Name" name="company"></p>
+                                <p> Companies Interested in sponsoring? </br>
+                                <input type="text" id="enquiry_company" name="enquiry_company" placeholder="Enter company name" style='width:200px;'></p>
                                 <p> Message : </br>
-                                <textarea id="Message" rows="6" name="message"></textarea></p>
+                                <textarea id="enquiry_message" rows="6" name="enquiry_message" style='width:200px;' required placeholder="message"></textarea></p>
                                 <input type="submit" name="submit" value="Submit" />
-                                <!--<button id="Submit" onClick="alert('Thank you for contacting us. We will get back to you soon!')"> Submit </button>-->
                                 </fieldset>
                             </div>
                             </form>
@@ -390,7 +387,6 @@
                             <!--</div>-->
                             <fieldset>
                                 <label class="name">
-                                    <!--<input type="text" name="name" required placeholder="Enter Full Name">-->
                                     <input id="questionform_name" name="questionform_name"
                                            type="text" placeholder="Enter Full Name"
                                            title="Your name is required." required style='width:250px;'/>
@@ -398,8 +394,8 @@
 								</label>
                                 <div class="clear"></div>
                                 <label class="questionform_email">
-                                    <input type="email" id="questionform_email" name="questionform_email" class="h5-email" placeholder="Enter a valid email address"
-                                            required style='width:250px;'>
+                                    <input type="email" id="questionform_email" name="questionform_email" class="h5-email" 
+                                           placeholder="Enter a valid email address" required style='width:250px;'>
                                     <br class="clear">
                                 </label>
                                 <label class="message">
@@ -408,11 +404,8 @@
                                     <br class="clear">
                                 </label>
                                 <div class="clear"></div>
-                                <!--<input type="range" size="2" name="satisfaction" min="1" max="5" value="3">-->
                                 <div class="btns">
-                                    <!--<input id="round" type="submit" value="Send Email!" />-->
                                     <input type="submit" name="submit" value="Send" id="submit" />
-                                    <!--<a data-type="submit" class="link1" id="send-question-email">Send</a>-->
                                     <div class="clear"></div>
                                 </div>
                             </fieldset>
@@ -428,30 +421,30 @@
 	</div>
 <!--==============================footer=================================-->
 <footer>
-	
+
 		<div class="copyrightInfo">© Copyright 2014 - CoderDojoD15. <br><br>Above All, Be Cool.</div>
-    <div id="input">
-        <a href="https://twitter.com/CoderDojoD15" title="Visit @CoderDojoD15 on Twitter!" target="_blank">
-            <img src="images/twitter.png" alt="Twitter icon" class="icon">
-        </a>
+        <div id="input">
+            <a href="https://twitter.com/CoderDojoD15" title="Visit @CoderDojoD15 on Twitter!" target="_blank">
+                <img src="images/twitter.png" alt="Twitter icon" class="icon">
+            </a>
 
-        <a href="connect.html" title="Visit us on Facebook!" target="_blank">
-            <img src="images/facebook.png" alt="Facebook icon" class="icon">
-        </a>
+            <a href="connect.html" title="Visit us on Facebook!" target="_blank">
+                <img src="images/facebook.png" alt="Facebook icon" class="icon">
+            </a>
 
-        <a href="http://www.youtube.com/user/coderdojo" title="Visit us on YouTube!" target="_blank">
-            <img src="images/youtube.png" alt="YouTube icon" class="icon">
-        </a>
+            <a href="http://www.youtube.com/user/coderdojo" title="Visit us on YouTube!" target="_blank">
+                <img src="images/youtube.png" alt="YouTube icon" class="icon">
+            </a>
 
-        <a href="connect.html" title="Visit the dojo on Pinterest!" target="_blank">
-            <img src="images/pinterest.png" alt="Pinterest icon" class="icon">
-        </a>
+            <a href="connect.html" title="Visit the dojo on Pinterest!" target="_blank">
+                <img src="images/pinterest.png" alt="Pinterest icon" class="icon">
+            </a>
 
-        <a href="connect.html" title="Visit CoderDojoITB on Google Plus!" target="_blank">
-            <img src="images/googleplus.png" alt="Google Plus icon" class="icon">
-        </a>
+            <a href="connect.html" title="Visit CoderDojoITB on Google Plus!" target="_blank">
+                <img src="images/googleplus.png" alt="Google Plus icon" class="icon">
+            </a>
 
-    </div>
+        </div>
     
 </footer>
 	</body>

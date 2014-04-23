@@ -169,7 +169,7 @@
                                 <input type="text" id="enquiry_company" name="enquiry_company" placeholder="Enter company name" style='width:200px;'></p>
                                 <p> Message : </br>
                                 <textarea id="enquiry_message" rows="6" name="enquiry_message" style='width:200px;' required placeholder="message"></textarea></p>
-                                <input type="submit" name="submit" value="Submit" />
+                                <input type="submit" name="submit" id="submit" value="Submit" />
                                 </fieldset>
                             </div>
                             </form>
@@ -390,7 +390,7 @@
                                     <input id="questionform_name" name="questionform_name"
                                            type="text" placeholder="Enter Full Name"
                                            title="Your name is required." required style='width:250px;'/>
-                                    <br class="clear">
+                                    <div class="clear"></div>
 								</label>
                                 <div class="clear"></div>
                                 <label class="questionform_email">
@@ -398,16 +398,15 @@
                                            placeholder="Enter a valid email address" required style='width:250px;'>
                                     <br class="clear">
                                 </label>
+                                <br class="clear">
                                 <label class="message">
                                     <textarea name="questionform_message" required placeholder="message"
                                               required style='width:300px;' rows=10;></textarea>
                                     <br class="clear">
                                 </label>
                                 <div class="clear"></div>
-                                <div class="btns">
                                     <input type="submit" name="submit" value="Send" id="submit" />
                                     <div class="clear"></div>
-                                </div>
                             </fieldset>
                         </form>
                         <br>

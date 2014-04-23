@@ -13,3 +13,5 @@ About -> goToByScroll('page2')
 Classes & Downloads -> goToByScroll('page3')
 Companies -> goToByScroll('page4')
 Contact & Find Us -> goToByScroll('page5')
+
+http://css-tricks.com/sending-nice-html-email-with-php/

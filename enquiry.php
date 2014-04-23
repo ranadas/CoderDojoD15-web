@@ -19,7 +19,7 @@
             die();
         }
 
-        $email_to="rana.pratap.das@gmail.com";
+        $email_to="CoderDojoD15@gmail.com,rana.pratap.das@gmail.com";
         $email_subject="Enquiry from CoderDojo Website";
 
         $name = $_POST['enquiry_name'];
@@ -28,12 +28,12 @@
         $mentor = $_POST['mentor_student'] == "mentor" ? "mentor" : "student";
         if (isset($_POST['topic'])) {
             $topics = $_POST['topic'];
-            $topic_strings = implode(' ', $topics);
-            //echo( count($topics)."</br>");
-            //echo("str : ".$topic_strings."</br>");
-//            $N=count($topics);
-//            for($i=0; $i < $N; $i++) {
-//                echo($topics[$i] . " ===== </br>");
+//            $topic_strings = implode(' ', $topics);
+            $topic_strings ="With topic(s) : ";
+            $topic_strings .= implode(", ", $topics);
+//            $nCount = count($topics);
+//            for($i=0; $i < $nCount; $i++) {
+//                $topic_strings .= "".$topics[$i].",";
 //            }
         }
 
@@ -41,9 +41,12 @@
         $company = $_POST['enquiry_company'];
 
         // create email headers
-        $headers = 'From: '.$name." <".$email_from.">\r\n".
-        'Reply-To: '.$email_from."\r\n" .
-        'X-Mailer: PHP/' . phpversion();
+        $headers = "From: " . $name." <".$email_from . "\r\n";
+        $headers .= "Reply-To: ". $name." <".$email_from . "\r\n";
+//        $headers .= "CC: rdas@example.com\r\n";
+        $headers .= "MIME-Version: 1.0\r\n";
+        $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+//        $headers .= 'X-Mailer: PHP/' . phpversion();
 
         //$sent = @mail($email_to, $email_subject, $message, $headers);
 //        echo("<br />\n");
@@ -53,29 +56,44 @@
 //        echo("mentor: " . $mentor . "<br />\n");
 //        echo("company: " . $company . "<br />\n");
 
-//        $message_body= "<b>".$name."</b></br>"." of type ".$mentor."</br>"." is interested <b>";
-//        if(!empty($topic)) {
-//            $message_body=$message_body.$topic_strings." </b>from </br>";
-//        }
-
 //        $message_body=$message_body
 //        ." with company name  ".$company
 //        ."</br> with message </br>".$message;
-//
-        $email_message="<p> Message from : ".$name." (".$email_from.").</br>"
-        ."".$message
-        ."</br></br> Additional info :</br>"
-        ." Type : ".$mentor
-        ."</br>";
+
+        // Get user IP address
+        if ( isset($_SERVER['HTTP_CLIENT_IP']) && ! empty($_SERVER['HTTP_CLIENT_IP'])) {
+            $ip = $_SERVER['HTTP_CLIENT_IP'];
+        } elseif ( isset($_SERVER['HTTP_X_FORWARDED_FOR']) && ! empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+            $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+        } else {
+            $ip = (isset($_SERVER['REMOTE_ADDR'])) ? $_SERVER['REMOTE_ADDR'] : '0.0.0.0';
+        }
+
+        $ip = filter_var($ip, FILTER_VALIDATE_IP);
+        $ip = ($ip === false) ? '0.0.0.0' : $ip;
+
+        $date = new DateTime('now', new DateTimeZone('GMT'));
+
+        $email_message  ="<html><body>";
+        $email_message .= "<p> An enquiry message from : ".$name." (".$email_from.").</br></p>";
+        $email_message .= "<p> on : ".$date->format('d/M/Y H:i')."\r\n</p>";
+        $email_message .= "<p> <b>".$message."</b></br>\r\n</p>";
+
+        $email_message .= "</br></br> <u>Additional info :</u></br>\r\n";
+        $email_message .= "<p>Type : ".$mentor;
+        $email_message .= "</br>\r\n</p>";
+
+
         if(!empty($topics)) {
-            $email_message = $email_message."</br>"
-            ."with topic(s) ".$topic_strings;
+            rtrim($topic_strings,',');
+            $email_message .= "<p>".$topic_strings."</p>";
         }
 
         if(!empty($company)) {
-            $email_message = $email_message."</br>"
-            ."from company ".$company;
+            $email_message .= "<p>From company:".$company."</p>\r\n";
         }
+        $email_message .= "<p> from ip : ".$ip."\r\n</p>";
+        $email_message .= "</body></html>";
 
         //echo("</br>email_message: " . $email_message . "<br />\n");
         $sent = @mail($email_to, $email_subject, $email_message, $headers);
@@ -88,5 +106,4 @@
             echo("We encountered an error sending your mail");
         }
     }
-
 ?>

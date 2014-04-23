@@ -78,7 +78,7 @@
         }
 
         //echo("</br>email_message: " . $email_message . "<br />\n");
-        $sent = @mail($email_to, $email_subject, $message, $headers);
+        $sent = @mail($email_to, $email_subject, $email_message, $headers);
 //        echo("sent: " . $sent . "<br />\n");
 
         if ($sent) {

@@ -33,7 +33,7 @@
 
         $date = new DateTime('now', new DateTimeZone('GMT'));
 
-        $email_to="CoderDojoD15@gmail.com,rana.pratap.das@gmail.com";
+        $email_to="CoderDojoD15@gmail.com";
         $email_subject="Question from CoderDojo Website";
 
         $name = $_POST['questionform_name'];

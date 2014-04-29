@@ -19,7 +19,7 @@
             die();
         }
 
-        $email_to="CoderDojoD15@gmail.com,rana.pratap.das@gmail.com";
+        $email_to="CoderDojoD15@gmail.com";
         $email_subject="Enquiry from CoderDojo Website";
 
         $name = $_POST['enquiry_name'];
